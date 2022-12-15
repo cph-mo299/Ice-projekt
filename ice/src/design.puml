@@ -1,12 +1,70 @@
 @startuml
-'https://plantuml.com/class-diagram
 
+' ******************
+' Classes
+' ******************
 
-
-class ArrayList {
-Object[] elementData
-size()
+class Main {
+    + static void main(String[] args)
 }
+
+class User interface {
+    - final ISessionCache sessionCache
+    - static JFrame page
+
+    + Login()
+
+    - void loadUser()
+
+    + void run()
+    - void chooseTask()
+    - void initUI()
+
+    + ISessionCache getSessionCache()
+    + static JFrame getPage()
+}
+
+class CompanySetup {
+    - final Company
+    - final int saveCP
+    - final ArrayList<ISeason> seasons
+    - ISeason currentSeason
+    - IUser currentUser
+
+
+}
+
+class Task implements  {
+    - Task Choose
+    - final ArrayList<Task> Task
+    - ArrayList<Company>
+    - Task Board
+
+
+
+    + TaskAction nextAction()
+    + void UpdateTask()
+
+}
+
+class Bid implements Bid {
+    - final BidAmount
+    - final BidCompany name
+    - final Bid
+    - final BidTask
+    - final BidTask.1
+
+
+}
+
+class Contract implements Contract1 {
+    - final Contract id
+    - final Contract name
+
+
+
+}
+
 
 
 @enduml
